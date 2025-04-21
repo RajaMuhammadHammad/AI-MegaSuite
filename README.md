@@ -1,8 +1,9 @@
 
-```markdown
+---
+
 # 🧠 AI-MegaSuite
 
-**AI-MegaSuite** is a powerful, multi-feature AI-powered desktop web application built with Python and Streamlit. It provides a range of functionalities including Optical Character Recognition (OCR), text summarization, image sketching, text-to-speech, voice-to-text, and PDF report generation — all in one intuitive platform.
+**AI-MegaSuite** is a powerful, multi-feature AI-powered desktop web application built with Python and Streamlit. It combines functionalities like **OCR**, **text summarization**, **image sketching**, **text-to-speech**, **voice-to-text**, and **PDF report generation**, all in a single, intuitive platform.
 
 ---
 
@@ -12,101 +13,89 @@
   Extract readable text from uploaded image files using Tesseract OCR.
 
 - 📝 **Text Summarizer**  
-  Summarize long paragraphs into shorter meaningful text.
+  Summarize lengthy paragraphs into concise and meaningful text.
 
 - 🎨 **Image to Sketch**  
-  Convert uploaded images into hand-drawn style sketches using image filters.
+  Transform uploaded images into hand-drawn style sketches with image filters.
 
 - 🔊 **Text-to-Speech**  
-  Convert your written text into spoken audio using Google Text-to-Speech.
+  Convert written text into spoken audio using Google Text-to-Speech.
 
 - 🎤 **Voice-to-Text**  
-  Upload audio and convert voice into text using SpeechRecognition and Google API.
+  Upload audio files and transcribe voice into text using SpeechRecognition and Google API.
 
 - 📄 **PDF Report Generator**  
-  Compile all outputs into a downloadable PDF report of your session.
+  Compile all outputs into a downloadable PDF report for your session.
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Setup Instructions
 
-```
-AI-MegaSuite/
-│
-├── text_to_speech.py        # Main Streamlit application file
-├── requirements.txt         # Dependencies
-├── README.md                # Project documentation
-└── output/                  # Output files (PDFs, audio)
-```
+### 1. Install Python
+Make sure Python 3.8 or higher is installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
 
----
+### 2. Install Tesseract OCR
+Tesseract is required for OCR functionality. Follow these steps to install it:
 
-## ⚙️ Installation Guide
+- **For Windows**:
+  1. Download the Tesseract installer from [Tesseract's official GitHub page](https://github.com/UB-Mannheim/tesseract/wiki).
+  2. Run the installer and add Tesseract to the system PATH.
+  
+- **For Linux**:
+  ```bash
+  sudo apt update
+  sudo apt install tesseract-ocr
+  ```
 
-### 1. Clone the Repository
+- **For macOS**:
+  ```bash
+  brew install tesseract
+  ```
+
+### 3. Install Dependencies
+Clone the repository and install the required dependencies using `requirements.txt`:
 
 ```bash
-git clone https://github.com/yourusername/AI-MegaSuite.git
+git clone https://github.com/RajaMuhammadHammad/AI-MegaSuite.git
 cd AI-MegaSuite
-```
-
-### 2. Set Up Python Environment
-
-Make sure Python 3.7+ is installed.
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 3. Install Tesseract OCR
-
-- 📦 [Download Tesseract OCR for Windows](https://github.com/tesseract-ocr/tesseract/wiki)
-- Install it to the default directory:
-  ```
-  C:\Program Files\Tesseract-OCR\tesseract.exe
-  ```
-- Then ensure your code contains:
-
-```python
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-```
-
----
-
-## 🧪 Run the App
+### 4. Run the Application
+Launch the Streamlit app with the following command:
 
 ```bash
-streamlit run text_to_speech.py
+streamlit run app.py
 ```
+
+Once the app is running, open your browser and navigate to [http://localhost:8501](http://localhost:8501).
 
 ---
 
-## 🧾 requirements.txt
+## 📄 Requirements File (`requirements.txt`)
 
-Here’s what to include in your `requirements.txt`:
+The `requirements.txt` file includes all the dependencies required for the project. Here are some of the key libraries used:
 
-```txt
+```
 streamlit
-pillow
 pytesseract
-gTTS
+opencv-python
+gtts
 SpeechRecognition
 fpdf
+transformers
 ```
 
-
-## 🤝 Contributing
-
-Pull requests are welcome!  
-If you find a bug or want to add new features, feel free to open an issue or submit a PR.
+Use the following command to install all dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## 👨‍💻 Developed By
 
-**Raja Muhammad Hammad**  
----
+AI-MegaSuite is developed by **Raja Muhammad Hammad**.  
+Feel free to reach out for feedback or collaboration!  
 
-```
+---
